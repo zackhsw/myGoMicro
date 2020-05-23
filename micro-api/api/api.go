@@ -6,9 +6,9 @@ import (
 	"fmt"
 	api "github.com/micro/go-micro/api/proto"
 	"github.com/micro/go-micro/errors"
-	proto "github.com/microservice/micro-api/api/noproto"
-	"golang.org/x/tools/internal/telemetry/log"
+	"github.com/micro/go-micro/v2"
 	"log"
+	proto "myGoMicro/micro-api/api/proto"
 	"strings"
 )
 
@@ -27,4 +27,15 @@ func (f *Foo) Bar(ctx context.Context, req *api.Request, rsp *api.Response) erro
 	})
 	rsp.Body = string(b)
 	return nil
+}
+
+func main() {
+	service := micro.NewService(
+		micro.Name("go.micro.api.example"))
+	service.Init()
+	proto.RegisterExampleHandler(service.SErver(), new(Example))
+	proto.RegisterFooHandler(service.Server(), new(Foo))
+	if err := service.Run(); err != nil {
+		log.Fatal(err)
+	}
 }
