@@ -6,7 +6,7 @@ import (
 	"io"
 
 	"github.com/micro/go-micro/v2/client"
-	proto "myGoMicro/file/proto"
+	proto "myGoMicro/micro-service/file/proto"
 	"net/http"
 )
 

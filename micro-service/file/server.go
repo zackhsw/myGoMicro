@@ -6,7 +6,7 @@ import (
 	"github.com/micro/go-micro/errors"
 	"github.com/micro/go-micro/v2"
 	"io/ioutil"
-	proto "myGoMicro/file/proto"
+	proto "myGoMicro/micro-service/file/proto"
 )
 
 type File struct{}

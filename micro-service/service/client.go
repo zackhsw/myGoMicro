@@ -5,7 +5,7 @@ import (
 	"fmt"
 	//"github.com/micro/go-micro"
 	"github.com/micro/go-micro/v2"
-	proto "myGoMicro/service/proto" //proto文件所在的位置
+	proto "myGoMicro/micro-service/service/proto" //proto文件所在的位置
 )
 
 func main() {
