@@ -2,8 +2,6 @@ module myGoMicro
 
 go 1.13
 
-replace google.golang.org/grpc => google.golang.org/grpc v1.26.0
-
 require (
 	github.com/coreos/etcd v3.3.20+incompatible // indirect
 	github.com/coreos/go-systemd v0.0.0-20191104093116-d3cd4ed1dbcf // indirect
@@ -14,6 +12,9 @@ require (
 	github.com/lucas-clemente/quic-go v0.15.6 // indirect
 	github.com/micro/go-micro v1.18.0
 	github.com/micro/go-micro/v2 v2.5.1-0.20200417165434-16db76bee2fb
+	github.com/micro/go-plugins/broker/nsq v0.0.0-20200119172437-4fe21aa238fd
+	github.com/micro/micro v1.18.0 // indirect
+	github.com/micro/protobuf v0.0.0-20180321161605-ebd3be6d4fdb // indirect
 	github.com/micro/protoc-gen-micro/v2 v2.3.0 // indirect
 	github.com/miekg/dns v1.1.29 // indirect
 	go.uber.org/zap v1.15.0 // indirect
